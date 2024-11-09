@@ -27,11 +27,11 @@
             border-radius: 10px;
             box-shadow: 0 5px 15px rgba(0,0,0,0.2);
             width: 100%;
-            max-width: 500px;
-            text-align: center;
+            max-width: 600px;
         }
 
         .logo {
+            text-align: center;
             font-size: 32px;
             font-weight: bold;
             color: #2c3e50;
@@ -40,9 +40,24 @@
         }
 
         h1 {
+            text-align: center;
             color: #2c3e50;
             margin-bottom: 20px;
             font-size: 24px;
+        }
+
+        .info-box {
+            background-color: #fff3cd;
+            border-left: 4px solid #ffc107;
+            padding: 15px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+        }
+
+        .info-box p {
+            color: #856404;
+            font-size: 14px;
+            line-height: 1.5;
         }
 
         .instructions {
@@ -50,7 +65,6 @@
             border-left: 4px solid #3498db;
             padding: 20px;
             margin-bottom: 30px;
-            text-align: left;
             border-radius: 5px;
         }
 
@@ -60,6 +74,12 @@
             font-size: 18px;
         }
 
+        .instructions h3 {
+            color: #34495e;
+            margin: 15px 0 10px;
+            font-size: 16px;
+        }
+
         .instructions ul {
             color: #34495e;
             margin-left: 20px;
@@ -67,10 +87,34 @@
             line-height: 1.6;
         }
 
+        .instructions li {
+            margin-bottom: 8px;
+        }
+
         .instructions p {
             color: #7f8c8d;
             font-size: 14px;
             line-height: 1.5;
+            margin-bottom: 15px;
+        }
+
+        .email-example {
+            background-color: #eef2f7;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 15px 0;
+        }
+
+        .email-example pre {
+            color: #34495e;
+            font-family: monospace;
+            line-height: 1.4;
+            white-space: pre-wrap;
+        }
+
+        .button-container {
+            text-align: center;
+            margin: 30px 0;
         }
 
         .email-button {
@@ -82,7 +126,6 @@
             border-radius: 5px;
             font-weight: bold;
             transition: background-color 0.3s ease;
-            margin-bottom: 20px;
         }
 
         .email-button:hover {
@@ -92,6 +135,31 @@
         .note {
             color: #7f8c8d;
             font-size: 14px;
+            text-align: center;
+            padding: 15px;
+            border-top: 1px solid #eee;
+        }
+
+        .timeline {
+            margin: 20px 0;
+            padding-left: 20px;
+            border-left: 2px solid #3498db;
+        }
+
+        .timeline-item {
+            margin-bottom: 15px;
+            position: relative;
+        }
+
+        .timeline-item:before {
+            content: '';
+            width: 10px;
+            height: 10px;
+            background: #3498db;
+            border-radius: 50%;
+            position: absolute;
+            left: -26px;
+            top: 5px;
         }
     </style>
 </head>
@@ -99,24 +167,60 @@
     <div class="container">
         <div class="logo">WordDuel</div>
         <h1>Account Deletion Request</h1>
+
+        <div class="info-box">
+            <p><strong>Important:</strong> Account deletion is permanent and cannot be undone. All your game history, achievements, and rankings will be permanently removed.</p>
+        </div>
         
         <div class="instructions">
             <h2>How to Delete Your Account</h2>
+            
+            <h3>Required Information</h3>
             <ul>
-                <li>Click the button below to create a new email</li>
-                <li>Include your WordDuel Username</li>
-                <li>Send from your registered email address</li>
-                <li>Optionally, tell us why you're leaving</li>
+                <li><strong>WordDuel Username:</strong> Your current username in the game</li>
+                <li><strong>Registered Email:</strong> The email address must match your WordDuel account</li>
+                <li><strong>Confirmation Statement:</strong> "I confirm that I want to delete my WordDuel account"</li>
             </ul>
-            <p>We'll process your request within 48 hours and send a confirmation email once completed.</p>
+
+            <h3>Email Template Example</h3>
+            <div class="email-example">
+                <pre>Subject: WordDuel Account Deletion Request
+
+Username: [Your WordDuel Username]
+Email: [Your Registered Email]
+
+I confirm that I want to delete my WordDuel account.
+
+Reason (Optional):
+[Your reason for leaving]</pre>
+            </div>
+
+            <h3>What Happens Next</h3>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <p><strong>Step 1:</strong> Send your deletion request</p>
+                </div>
+                <div class="timeline-item">
+                    <p><strong>Step 2:</strong> Receive confirmation email within 24 hours</p>
+                </div>
+                <div class="timeline-item">
+                    <p><strong>Step 3:</strong> Account deletion processed within 48 hours</p>
+                </div>
+                <div class="timeline-item">
+                    <p><strong>Step 4:</strong> Final confirmation email sent</p>
+                </div>
+            </div>
         </div>
 
-        <a href="mailto:huseyincorakli46@gmail.com?subject=WordDuel Account Deletion Request" class="email-button">
-            Send Account Deletion Request
-        </a>
+        <div class="button-container">
+            <a href="mailto:huseyincorakli46@gmail.com?subject=WordDuel Account Deletion Request" class="email-button">
+                Send Account Deletion Request
+            </a>
+        </div>
         
         <p class="note">
-            Please note: Your request must come from your registered email address to be processed.
+            For security reasons, requests must come from your registered email address.<br>
+            If you're having trouble, please contact our support team.
         </p>
     </div>
 </body>
